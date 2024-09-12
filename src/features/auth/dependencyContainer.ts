@@ -1,5 +1,5 @@
 import { container } from 'tsyringe';
 import { AuthService } from '../../core/authService';
 
-// Register AuthService in the container
+// Реєстрація AuthService в контейнері
 container.register(AuthService, { useClass: AuthService });

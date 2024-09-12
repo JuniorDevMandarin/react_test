@@ -17,12 +17,12 @@ export const Header = () =>  {
         
         <div className="font-semibold leading-6 text-indigo-600  hover:text-indigo-500 ml-2 no-underline">
         {isLoginPage ? (
-          // Если на странице логина, показываем кнопку "Home"
+          // Якщо на сторінці логіна, показуємо кнопку «Home»
           <Link to="/" className='font-semibold leading-6 text-indigo-600  hover:text-indigo-500 ml-2 no-underline'>
             Home
           </Link>
         ) : (
-          // В противном случае показываем кнопку "Log in"
+          // В іншому разі показуємо кнопку «Log in»
           <Link to='/login' className='font-semibold leading-6 text-indigo-600  hover:text-indigo-500 ml-2 no-underline'>
             Log in
           </Link>

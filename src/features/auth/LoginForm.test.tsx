@@ -13,17 +13,17 @@ const mockAuthService: Partial<AuthService> = {
   login: mockLogin,
 };
 
-// Register the mock service with the DI container
+// Реєстрація фіктивного сервісу з контейнером DI
 container.registerInstance(AuthService, mockAuthService as AuthService);
 
 test('should call login on submit', () => {
   render(<LoginForm />);
   
-  // Perform actions on the form
+  // Виконання дій у формі
   fireEvent.change(screen.getByPlaceholderText("Ім'я користувача"), { target: { value: 'username' } });
   fireEvent.change(screen.getByPlaceholderText('Пароль'), { target: { value: 'password' } });
   fireEvent.click(screen.getByText('Вхід'));
 
-  // Verify that the login method was called with the correct parameters
+  // Перевірка того, що метод входу був викликаний з правильними параметрами
   expect(mockLogin).toHaveBeenCalledWith('username', 'password');
 });
